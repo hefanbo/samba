@@ -24,6 +24,11 @@ OR set local storage:
                 -v /path/to/directory:/mount \
                 -d dperson/samba -p
 
+One more example:
+
+    docker build -t hefanbo/samba .
+    docker run --rm --name samba -p 192.168.120.1:139:139 -p 192.168.120.1:445:445 -v /hostdata:/data hefanbo/samba -w "WORKGROUP" -u "guest;guest" -s "data;/data;;no"
+
 ## Configuration
 
     sudo docker run -it --rm dperson/samba -h
