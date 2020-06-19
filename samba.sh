@@ -123,7 +123,7 @@ share() { local share="$1" path="$2" browsable="${3:-yes}" ro="${4:-yes}" \
     echo "   browsable = $browsable" >>$file
     echo "   read only = $ro" >>$file
     echo "   guest ok = $guest" >>$file
-    [[ ${VETO:-yes} == no ]] || {
+    [[ ${VETO:-no} == no ]] || {
         echo -n "   veto files = /.apdisk/.DS_Store/.TemporaryItems/" >>$file
         echo -n ".Trashes/desktop.ini/ehthumbs.db/Network Trash Folder/" >>$file
         echo "Temporary Items/Thumbs.db/" >>$file
