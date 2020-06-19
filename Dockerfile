@@ -19,12 +19,12 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   pam password change = yes' >>$file && \
     echo '   map to guest = bad user' >>$file && \
     echo '   usershare allow guests = yes' >>$file && \
-    echo '   create mask = 0664' >>$file && \
-    echo '   force create mode = 0664' >>$file && \
-    echo '   directory mask = 0775' >>$file && \
-    echo '   force directory mode = 0775' >>$file && \
+    echo '   create mask = 0666' >>$file && \
+    echo '   force create mode = 0666' >>$file && \
+    echo '   directory mask = 0777' >>$file && \
+    echo '   force directory mode = 0777' >>$file && \
     echo '   force user = nobody' >>$file && \
-    echo '   force group = nogroup' >>$file && \
+    echo '   force group = nobody' >>$file && \
     echo '   follow symlinks = yes' >>$file && \
     echo '   load printers = no' >>$file && \
     echo '   printing = bsd' >>$file && \
